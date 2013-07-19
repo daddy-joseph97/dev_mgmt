@@ -1,0 +1,11 @@
+=========================
+Virtualenvwrapper Gotchas
+=========================
+
+Copying virtenvs (cpvirtualenv)
+_______________________________
+
+.. code-block:: bash
+
+  find . -type f -execdir sed --in-place=_orig "s/hornswoggle/omnimedia_blog/g" {} \;
+

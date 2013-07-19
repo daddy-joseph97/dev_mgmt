@@ -1,3 +1,2 @@
-memoryview
 bitarray
 
