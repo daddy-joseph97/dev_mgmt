@@ -1,0 +1,7 @@
+# pythonz
+[[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
+
+# virtualenvwrapper
+export WORKON_HOME=$HOME/dev-py_venvs
+export PROJECT_HOME=$HOME/dev-code_repos
+. /usr/local/bin/virtualenvwrapper.sh

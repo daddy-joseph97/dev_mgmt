@@ -1,0 +1,7 @@
+
+# yes, I use vim... no, I am not interested in joining your 12 step program ;)
+# and I have learned not to rely on etc-alternatives sadly
+export EDITOR=vim
+
+source $HOME/.bash_myschtuff
+source $HOME/.bash_aliases
