@@ -4,4 +4,4 @@
 export EDITOR=vim
 
 source $HOME/.bash_myschtuff
-source $HOME/.bash_aliases
+source $HOME/.bash_myaliases

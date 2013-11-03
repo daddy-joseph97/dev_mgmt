@@ -1,0 +1,10 @@
+# packages, paths and instructions for base development
+# applies to Ubuntu as of 13.10
+PKGS="zlib1g-dev"
+
+# Env vars
+
+# sourced files
+
+# files to download (or repositories) and execute
+

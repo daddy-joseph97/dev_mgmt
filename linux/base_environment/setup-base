@@ -1,0 +1,17 @@
+# packages, paths and instructions for base development
+# applies to Ubuntu as of 13.10
+PKGS="autoconf
+automake
+build-essential
+git
+libtool
+pkg-config
+texi2html
+zlib1g-dev
+curl
+fetch"
+
+# Env vars
+
+# sourced files
+
