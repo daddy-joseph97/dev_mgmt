@@ -3,13 +3,16 @@
 PKGS="autoconf
 automake
 build-essential
+mercurial
+quilt
+libc6-dev
+libbz2-dev
 git
 libtool
 pkg-config
 texi2html
 zlib1g-dev
-curl
-fetch"
+curl"
 
 # Env vars
 

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Script to setup the environment and system for development
 # Uses separate files for packages, instructions, environment vars, etc
 # NOTE: no sanity checks in place, it just blissfully installs and brutally
@@ -12,15 +12,15 @@ do
 done
 
 # test if this is needed since exec used
-newgrp devs
+#newgrp devs
 
 cd ~/dev-mysrc/dev_mgmt/linux/base_environment
-cat bashrc_stub >> `/.bashrc
+cat bashrc_stub >> ~/.bashrc
 cp bash_myaliases ~/.bash_myaliases
 cp bash_myschtuff ~/.bash_myschtuff
-. `/.bashrc
+. ~/.bashrc
 
-newgrp devs
+#newgrp devs
 
 # for now, just one at a time ('module') setup, not concatenated
 for base_file in setup-base setup-mmedia_dev setup-python
@@ -37,6 +37,9 @@ python ez_setup.py --user
 
 curl -O https://raw.github.com/pypa/pip/master/contrib/get-pip.py
 python get-pip.py --user
+
+pip install --install-option="--user" virtualenvwrapper
+. ~/.bashrc
 
 curl -kLO https://raw.github.com/saghul/pythonz/master/pythonz-install
 chmod u+x pythonz-install

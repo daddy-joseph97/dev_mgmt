@@ -4,4 +4,7 @@
 # virtualenvwrapper
 export WORKON_HOME=$HOME/dev-py_venvs
 export PROJECT_HOME=$HOME/dev-venv_repos
-. /usr/local/bin/virtualenvwrapper.sh
+#. /usr/local/bin/virtualenvwrapper.sh
+# using local install via:
+#  $ pip install --install-option="--user" virtualenvwrapper
+. ~/.local/bin/virtualenvwrapper.sh

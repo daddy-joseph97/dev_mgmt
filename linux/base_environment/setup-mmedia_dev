@@ -10,7 +10,9 @@ libvorbis-dev
 libx11-dev
 libxext-dev
 zlib1g-dev
-libxfixes-dev"
+libxfixes-dev
+xvfb
+libxss-dev"
 
 # Env vars
 

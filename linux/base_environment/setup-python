@@ -1,6 +1,19 @@
 # packages, paths and instructions for base development
 # applies to Ubuntu as of 13.10
-PKGS="zlib1g-dev"
+PKGS="zlib1g-dev
+libz-dev
+libreadline-dev
+libreadline6-dev
+libncurses5-dev
+libncursesw5-dev
+libssl-dev
+libgdbm-dev
+libsqlite3-dev
+liblzma-dev
+libdb-dev
+libc6-dev
+libtinfo-dev
+help2man"
 
 # Env vars
 
