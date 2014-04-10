@@ -1,10 +1,27 @@
+# local installs including python packages
+export PATH=~/.local/bin:$PATH
+
 # pythonz
 [[ -s $HOME/.pythonz/etc/bashrc ]] && source $HOME/.pythonz/etc/bashrc
 
 # virtualenvwrapper
 export WORKON_HOME=$HOME/dev-py_venvs
-export PROJECT_HOME=$HOME/dev-venv_repos
-#. /usr/local/bin/virtualenvwrapper.sh
-# using local install via:
-#  $ pip install --install-option="--user" virtualenvwrapper
-. ~/.local/bin/virtualenvwrapper.sh
+export PROJECT_HOME=$HOME/dev-code_repos
+. /usr/local/bin/virtualenvwrapper.sh
+
+#inconvience functions
+gomake () { mkdir -p $1 && cd $1; }
+
+export EDITOR=/usr/bin/vim
+
+# lang and charset thingies
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
+
+# colored syntax highlighting for less
+#export LESS="-R"
+#eval "$(lesspipe)"
+
+# make less more friendly for non-text input files, see lesspipe(1)
+#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"

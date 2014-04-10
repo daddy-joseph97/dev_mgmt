@@ -1,2 +1,7 @@
 alias ll='/bin/ls -AlhF --color=always'
 alias l='/bin/ls -AF --color=always'
+
+alias less='/usr/bin/less -iR -+S'
+
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'

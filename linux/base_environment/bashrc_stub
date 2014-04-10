@@ -3,5 +3,14 @@
 # and I have learned not to rely on etc-alternatives sadly
 export EDITOR=vim
 
-source $HOME/.bash_myschtuff
-source $HOME/.bash_myaliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi
+
+if [ -f ~/.bash_myschtuff ]; then
+    . ~/.bash_myschtuff
+fi
+
+if [ -f ~/.bash_myaliases ]; then
+    . ~/.bash_myaliases
+fi
