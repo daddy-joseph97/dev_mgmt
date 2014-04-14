@@ -5,17 +5,13 @@
 # and pulls down the rest and setups accordingly
 # NOTE: no sanity checks in place, it just blissfully installs and brutally
 # assumes it knows best... for now
-PKGS="git"
+#PKGS="git mercurial"
 PATHS=(/var/local/forge/dump
-/var/local/forge/non_proj_src
 /var/local/forge/py_virtenvs
-/var/local/forge/others_src
-/var/local/forge/virtenv_proj_src)
+/var/local/forge/code_repos)
 SYMLINKS=(~/dev-dump
-~/dev-mysrc
 ~/dev-pyvenvs
-~/dev-oss_src
-~/dev-venv_repos)
+~/dev-code_repos)
 
 #sudo apt-get update
 #sudo apt-get install $PKGS
@@ -49,7 +45,7 @@ sudo mkdir -p /var/local/backup/users/`whoami`
 sudo chown `whoami`:`whoami` /var/local/backup/users/`whoami`
 ln -s /var/local/backup/users/`whoami` ~/backup
 
-cd ~/dev-mysrc/
+cd ~/dev-code_repos/
 git clone https://github.com/daddy-joseph97/dev_mgmt.git
 cd dev_mgmt/linux/base_environment
 #exec bash setup-dev_script.sh
