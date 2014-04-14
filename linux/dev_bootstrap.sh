@@ -45,6 +45,8 @@ sudo mkdir -p /var/local/backup/users/`whoami`
 sudo chown `whoami`:`whoami` /var/local/backup/users/`whoami`
 ln -s /var/local/backup/users/`whoami` ~/backup
 
+sudo apt-get update && sudo apt-get install git
+
 cd ~/dev-code_repos/
 git clone https://github.com/daddy-joseph97/dev_mgmt.git
 cd dev_mgmt/linux/base_environment
