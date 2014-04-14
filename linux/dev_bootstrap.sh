@@ -29,9 +29,9 @@ do
 	if [ ! -d ${PATHS[$idx]} ]
 	then
 		sudo mkdir -p ${PATHS[$idx]}
-		sudo chmod g+w ${PATHS[$idx]}
-		sudo chown :devs ${PATHS[$idx]}
-	fi
+    fi
+	sudo chmod g+w ${PATHS[$idx]}
+	sudo chown :devs ${PATHS[$idx]}
 	if [ ! -d ${SYMLINKS[$idx]} ]
 	then
 		ln -sf ${PATHS[$idx]} ${SYMLINKS[$idx]}
@@ -43,7 +43,7 @@ sudo mkdir -p /var/local/backup/system_only
 sudo mkdir -p /var/local/backup/users/`whoami`
 # yeah, many evil assumptions...
 sudo chown `whoami`:`whoami` /var/local/backup/users/`whoami`
-ln -s /var/local/backup/users/`whoami` ~/backup
+ln -sf /var/local/backup/users/`whoami` ~/backup
 
 sudo apt-get update && sudo apt-get install git
 
