@@ -45,10 +45,12 @@ sudo mkdir -p /var/local/backup/users/`whoami`
 sudo chown `whoami`:`whoami` /var/local/backup/users/`whoami`
 ln -sf /var/local/backup/users/`whoami` ~/backup
 
-sudo apt-get update && sudo apt-get install git
-
-cd ~/dev-code_repos/
-git clone https://github.com/daddy-joseph97/dev_mgmt.git
-cd dev_mgmt/linux/base_environment
+sudo apt-get update && sudo apt-get --assume-yes install git
+if [ ! -e ~/dev-code_repos/dev_mgmt ]
+then
+	cd ~/dev-code_repos/
+	git clone https://github.com/daddy-joseph97/dev_mgmt.git
+fi
+cd ~/dev-code_repos/dev_mgmt/linux/base_environment
 #exec bash setup-dev_script.sh
-echo "Initial bootstrap completed, run ./setup-dev_script.sh for next steps."
+echo "Initial bootstrap completed, run ~/dev-code_repos/dev_mgmt/linux/base_environment/setup-dev_script.sh for next steps."
