@@ -43,7 +43,12 @@ sudo mkdir -p /var/local/backup/system_only
 sudo mkdir -p /var/local/backup/users/`whoami`
 # yeah, many evil assumptions...
 sudo chown `whoami`:`whoami` /var/local/backup/users/`whoami`
-ln -sf /var/local/backup/users/`whoami` ~/backup
+src_file=/var/local/backup/users/`whoami`
+trgt_link=~/backup
+if [ -e $src_file ] && [ ! -e $trgt_link ]
+then
+	ln -sf /var/local/backup/users/`whoami` ~/backup
+fi
 
 sudo apt-get update && sudo apt-get --assume-yes install git
 if [ ! -e ~/dev-code_repos/dev_mgmt ]
