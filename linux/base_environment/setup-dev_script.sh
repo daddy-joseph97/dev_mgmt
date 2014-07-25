@@ -3,6 +3,18 @@
 # Uses separate files for packages, instructions, environment vars, etc
 # NOTE: no sanity checks in place, it just blissfully installs and brutally
 # assumes it knows best... for now
+# also, there is sadly a need for a lot of complexity for security reasons
+# and just basic sanity with BASH regarding resolving the ACTUAL path
+# the script run is in, see http://stackoverflow.com/a/246128 for details
+# but here we will just make assumptions for now
+# also assuming an OS that uses coreutils thus use of realpath
+# besides, we are already assuming Ubuntu here... yes, yes I know, that
+# is something to fix
+sudo apt-get install realpath
+
+REAL_PATH=$(realpath $0)
+REAL_BASE_DIR=$(dirname $REAL_PATH)
+cd ${REAL_BASE_DIR}
 source ../functions.sh
 
 BACKUP_FILES="$HOME/.bashrc
