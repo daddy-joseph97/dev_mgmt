@@ -10,7 +10,7 @@ PATHS=(/var/local/forge/dump
 /var/local/forge/py_virtenvs
 /var/local/forge/code_repos)
 SYMLINKS=(~/dev-dump
-~/dev-pyvenvs
+~/dev-py_venvs
 ~/dev-code_repos)
 
 #sudo apt-get update
